@@ -1,4 +1,6 @@
 <script>
+	import RandomText from './RandomText.svelte';
+
   const callApi = async () => {
     const response = await fetch('https://randomfox.ca/floof/')
     return response.json()
@@ -16,12 +18,13 @@
 		<a href={data.link}>{data.link}</a>
 	</div>
 {/await}
+<RandomText />
 
 <style>
 	.card {
 		max-width: 500px;
 		padding: 0.7em;
-		background:#fdb197;
+		background: #ffdbe1;
 		margin: 0 auto;
 		border-radius: 7px;
 	}
