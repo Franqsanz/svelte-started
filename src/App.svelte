@@ -10,22 +10,22 @@
 </script>
 
 <h1>Fox</h1>
+<RandomText />
 
 {#await apiImage then data}
 	<div class="card">
-		<img src={data.image} alt="Fox" />
+		<img src={data.image} alt="Fox" decoding="async" />
 		Link:
 		<a href={data.link}>{data.link}</a>
 	</div>
 {/await}
-<RandomText />
 
 <style>
 	.card {
 		max-width: 500px;
 		padding: 0.7em;
 		background: #ffdbe1;
-		margin: 0 auto;
+		margin: 6ch auto;
 		border-radius: 7px;
 	}
 
