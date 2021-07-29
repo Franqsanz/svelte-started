@@ -38,7 +38,7 @@
   let newPhrases = null;
   let data = JSON.parse(localStorage.getItem("phrases"));
 
-  if (data === null) {
+  if (!data) {
     localStorage.setItem('phrases', JSON.stringify(phrases));
   }
 
@@ -78,7 +78,7 @@
 <style>
   p {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     color: #fafafa;
     font-size: clamp(1.125rem, 3vw, 1.563rem );
@@ -96,12 +96,25 @@
     box-sizing: border-box;
     padding: 3em 0 3em 0;
   }
+
+  button, textarea {
+    border-radius: 7px;
+  }
+
   button {
     padding: 1em;
     margin: 2ch 0 0 0;
     background: #ff3e00;
-    color: #ffffff;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 3px;
   }
+
+  button:active {
+    background: #c73200;
+    color: white;
+  }
+
   textarea {
     padding: 0.5em;
     font-size: 1.125rem;
