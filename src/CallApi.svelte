@@ -16,7 +16,7 @@
 <main>
   {#each characters as character}
     <div class="card">
-      <img src={character.image} alt="Imagen de {character.name}">
+      <img src={character.image} alt="Imagen de {character.name}" loading="lazy" decoding="async">
       <div class="info">
         <h1>{character.name}</h1>
         <h2>{character.species}</h2>
