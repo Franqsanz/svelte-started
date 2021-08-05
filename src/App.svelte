@@ -1,5 +1,6 @@
 <script>
 	import RandomText from './RandomText.svelte';
+	import CallApi from './CallApi.svelte';
 
   const callApi = async () => {
     const response = await fetch('https://randomfox.ca/floof/')
@@ -19,6 +20,8 @@
 		<a href={data.link}>{data.link}</a>
 	</div>
 {/await}
+
+<CallApi />
 
 <style>
 	.card {

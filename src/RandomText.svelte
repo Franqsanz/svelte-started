@@ -81,7 +81,7 @@
     max-width: 400px;
     margin: 0 auto;
     color: #fafafa;
-    font-size: clamp(1.125rem, 3vw, 1.563rem );
+    font-size: clamp(1.125rem, 3vw, 1.563rem);
     line-height: 1.66;
     font-style: italic;
     text-align: center;
