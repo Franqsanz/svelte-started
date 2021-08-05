@@ -16,7 +16,7 @@
 <main>
   {#each characters as character}
     <div class="card">
-      <img src={character.image} alt="">
+      <img src={character.image} alt="Imagen de {character.name}">
       <div class="info">
         <h1>{character.name}</h1>
         <h2>{character.species}</h2>
@@ -25,7 +25,7 @@
       </div>
     </div>
   {:else}
-    <h1>loading...</h1>
+    <h1 class="title">loading...</h1>
   {/each}
 </main>
 
@@ -41,6 +41,7 @@
     flex-wrap: wrap;
     justify-content: center;
     grid-gap: 1.5em;
+    padding: 0 0 3em 0;
   }
 
   .card {
