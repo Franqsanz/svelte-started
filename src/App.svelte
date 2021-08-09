@@ -24,7 +24,8 @@
 	nav	{
 		display: flex;
 		justify-content: center;
-		background: #0f2944;
+		font-weight: 700;
+		/* background: #0f2944; */
 	}
 
 	ul {
@@ -34,6 +35,6 @@
 
 	li {
 		list-style: none;
-		padding: 0.7em;
+		padding: 0.5em;
 	}
 </style>

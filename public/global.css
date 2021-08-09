@@ -14,13 +14,13 @@ body {
 
 .title{
 	color: #ff3e00;
-	font-size: clamp(2.5rem, 7vw, 6rem);
+	font-size: clamp(3rem, 7vw, 6.5rem);
 	font-weight: 100;
 	text-align: center;
 }
 
 a {
-	color: #ffffff;
+	color: #ffc700;
 	font-size: 1.125rem;
 	text-decoration: none;
 }

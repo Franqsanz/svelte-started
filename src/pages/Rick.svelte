@@ -1,4 +1,6 @@
 <script>
+  let url = 'Rick and Morty';
+
   import { onMount } from 'svelte';
 
   let endpoint = 'https://rickandmortyapi.com/api/character';
@@ -49,17 +51,6 @@
 
   img {
     max-width: 100%;
-  }
-
-  img::after {
-    content: "asaddgthy";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    position: absolute;
-    background: inherit;
-    filter: blur(40px);
-    z-index: -1;
   }
 
   .info {
