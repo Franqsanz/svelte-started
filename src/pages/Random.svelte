@@ -68,6 +68,8 @@
 
 </script>
 
+<h1 class="title">Random Phrases</h1>
+
 <p>{phrase.phrase}</p>
 
 <form on:submit={handleSubmit}>

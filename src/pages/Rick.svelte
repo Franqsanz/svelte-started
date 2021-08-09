@@ -15,33 +15,26 @@
 
 <main>
   {#each characters as character}
-    <div class="card">
+    <figure class="card">
       <img src={character.image} alt="Imagen de {character.name}" loading="lazy" decoding="async">
-      <div class="info">
+      <figcaption class="info">
         <h1>{character.name}</h1>
         <h2>{character.species}</h2>
         <h3>{character.status} </h3>
         <span>{character.location.name}</span>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   {:else}
     <h1 class="title">loading...</h1>
   {/each}
 </main>
 
 <style>
-  .title {
-    text-align: center;
-    color: #ff3e00;
-    font-size: clamp(2.5rem, 7vw, 6rem);
-  }
-
   main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     grid-gap: 1.5em;
-    padding: 0 0 3em 0;
   }
 
   .card {
@@ -56,6 +49,17 @@
 
   img {
     max-width: 100%;
+  }
+
+  img::after {
+    content: "asaddgthy";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: inherit;
+    filter: blur(40px);
+    z-index: -1;
   }
 
   .info {

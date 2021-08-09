@@ -1,48 +1,39 @@
 <script>
-	import RandomText from './RandomText.svelte';
-	import CallApi from './CallApi.svelte';
+	import { Router, Route, Link } from "svelte-routing";
+	import Home from './pages/Home.svelte';
+	import Random from './pages/Random.svelte';
+	import Rick from './pages/Rick.svelte';
 
-  const callApi = async () => {
-    const response = await fetch('https://randomfox.ca/floof/')
-    return response.json()
-  }
-
-	const apiImage = callApi();
+  export let url = "";
 </script>
 
-<h1>Fox</h1>
-<RandomText />
-
-{#await apiImage then data}
-	<div class="card">
-		<img src={data.image} alt="Fox" decoding="async" />
-		Link:
-		<a href={data.link}>{data.link}</a>
-	</div>
-{/await}
-
-<CallApi />
+<Router url={url}>
+	<nav>
+		<ul>
+			<li><Link to="/">Home</Link></li>
+			<li><Link to="random">Random Phrases</Link></li>
+			<li><Link to="rick">Rick</Link></li>
+		</ul>
+	</nav>
+	<Route path="random" component={Random} />
+	<Route path="rick" component={Rick} />
+	<Route path="/"><Home /></Route>
+</Router>
 
 <style>
-	.card {
-		max-width: 500px;
+	nav	{
+		display: flex;
+		justify-content: center;
+		background: #0f2944;
+	}
+
+	ul {
+		display: flex;
+		padding-inline-start: 0;
+	}
+
+	li {
+		list-style: none;
 		padding: 0.7em;
-		background: #ffdbe1;
-		margin: 6ch auto;
-		border-radius: 7px;
-	}
-
-	img {
-		max-width: 100%;
-		object-fit: cover;
-		border-radius: 7px;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 5em;
-		font-weight: 100;
-		text-align: center;
 	}
 </style>
