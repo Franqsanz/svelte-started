@@ -41,7 +41,10 @@ export default {
 			compilerOptions: {
 				// enable run-time checks when not in production
 				hydratable: true,
-				dev: !production
+				dev: !production,
+				css: css => {
+					css.write('public/build/bundle.css')
+				}
 			},
 		}),
 		// we'll extract any component CSS out into

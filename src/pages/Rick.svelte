@@ -1,9 +1,8 @@
 <script>
-  let url = 'Rick and Morty';
-
   import { onMount } from 'svelte';
 
   let endpoint = 'https://rickandmortyapi.com/api/character';
+  let query = '';
   let characters = [];
 
   onMount(async () => {
@@ -11,19 +10,39 @@
     const data = await res.json();
     characters = data.results;
   });
+
+  async function search() {
+    let filter = `https://rickandmortyapi.com/api/character/?name=${query}`;
+    const res = await fetch(filter);
+    const data = await res.json();
+    characters = data.results;
+  }
 </script>
 
 <h1 class="title">Rick and Morty</h1>
 
+<div class="contentSearch">
+  <input
+    type="search"
+    bind:value={query}
+    on:keydown={search}
+    placeholder="Search"
+  />
+</div>
+
 <main>
   {#each characters as character}
-    <figure class="card">
-      <img src={character.image} alt="Imagen de {character.name}" loading="lazy" decoding="async">
-      <figcaption class="info">
-        <h1>{character.name}</h1>
-        <h2>{character.species}</h2>
-        <h3>{character.status} </h3>
-        <span>{character.location.name}</span>
+    <figure>
+      <picture>
+        <img src={character.image} alt="Imagen de {character.name}" loading="lazy" decoding="async">
+      </picture>
+      <figcaption>
+        <section>
+          <h1 class="name">{character.name}</h1>
+          <h2>{character.species}</h2>
+          <h3>{character.status} </h3>
+          <span>{character.location.name}</span>
+        </section>
       </figcaption>
     </figure>
   {:else}
@@ -32,14 +51,23 @@
 </main>
 
 <style>
+  .contentSearch {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 3em 0;
+  }
+
+  input[type="search"] {
+    width: 250px;
+  }
+
   main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-gap: 1.5em;
   }
 
-  .card {
+  figure {
     display: flex;
     width: 100%;
     max-width: 300px;
@@ -49,11 +77,16 @@
     overflow: hidden;
   }
 
-  img {
-    max-width: 100%;
+  section {
+    padding: 0 1em 1em 1em;
   }
 
-  .info {
-    padding: 0 1em 1em 1em;
+  .name {
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
+  img {
+    max-width: 100%;
   }
 </style>

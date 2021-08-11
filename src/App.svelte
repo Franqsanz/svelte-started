@@ -24,8 +24,7 @@
 	nav	{
 		display: flex;
 		justify-content: center;
-		font-weight: 700;
-		/* background: #0f2944; */
+		background: #0f29447d;
 	}
 
 	ul {
