@@ -65,6 +65,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* grid-gap: 10ch; */
   }
 
   figure {
@@ -72,13 +73,16 @@
     width: 100%;
     max-width: 300px;
     flex-direction: column;
-    background: #ececec;
+    background: hsl(0 0% 100% / 100%);
     border-radius: 7px;
     overflow: hidden;
   }
 
   section {
-    padding: 0 1em 1em 1em;
+    padding: 0.1em 1em 1em 1em;
+    margin-top: -80px;
+    background: linear-gradient(hsl(0 0% 100% / 20%),hsl(0 0% 100% / 70%), hsl(0 0% 100% / 100%));
+    backdrop-filter: blur(20px);
   }
 
   .name {
