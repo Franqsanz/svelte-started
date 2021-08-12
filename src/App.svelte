@@ -1,21 +1,23 @@
 <script>
 	import { Router, Route, Link } from "svelte-routing";
 	import Home from './pages/Home.svelte';
-	import Random from './pages/Random.svelte';
+	import Phrases from './pages/Phrases.svelte';
 	import Rick from './pages/Rick.svelte';
 
   export let url = "";
 </script>
 
 <Router url={url}>
-	<nav>
-		<ul>
-			<li><Link to="/">Home</Link></li>
-			<li><Link to="random">Random Phrases</Link></li>
-			<li><Link to="rick">Rick</Link></li>
-		</ul>
-	</nav>
-	<Route path="random" component={Random} />
+	<header>
+		<nav>
+			<ul>
+				<li><Link to="/">Home</Link></li>
+				<li><Link to="phrases">Phrases</Link></li>
+				<li><Link to="rick">Rick</Link></li>
+			</ul>
+		</nav>
+	</header>
+	<Route path="phrases" component={Phrases} />
 	<Route path="rick" component={Rick} />
 	<Route path="/"><Home /></Route>
 </Router>
@@ -34,6 +36,6 @@
 
 	li {
 		list-style: none;
-		padding: 0.5em;
+		padding: 0 0.5em 0 0.5em;
 	}
 </style>

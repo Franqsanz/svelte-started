@@ -96,7 +96,7 @@
     margin: 0 auto;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 3em 0 3em 0;
+    padding: 2em;
   }
 
   button, textarea {
@@ -119,6 +119,7 @@
 
   textarea {
     padding: 0.5em;
+    height: 100px;
     font-size: 1.125rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }

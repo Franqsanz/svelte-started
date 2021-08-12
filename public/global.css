@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-	color: #252525;
+	color: #ffffff;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -21,7 +21,7 @@ body {
 
 a {
 	color: #ffffff;
-	font-size: 1.125rem;
+	font-size: clamp(1rem, 3vw, 1.250rem);
 	text-decoration: none;
 }
 
@@ -41,8 +41,9 @@ input, button {
 }
 
 button {
-	color: #333;
-	background-color: #f4f4f4;
+	color: #000000;
+	background-color: #ff3e00;
+	border: 1px solid #ff3e00;
 	outline: none;
 }
 
