@@ -24,9 +24,8 @@
     type="search"
     bind:value={query}
     on:keydown={search}
-    placeholder="Search"
+    placeholder="Search by Name"
   />
-  <button on:click={search}>🔎</button>
 </div>
 
 <main>
@@ -50,7 +49,6 @@
 </main>
 
 <style>
-
   .contentSearch {
     display: flex;
     justify-content: center;
@@ -58,7 +56,11 @@
   }
 
   input[type="search"] {
-    width: 200px;
+    width: 230px;
+    padding: 0.7em;
+    font-size: inherit;
+	  border: 1px solid #b8b8b8;
+	  border-radius: 5px
   }
 
   main {
@@ -75,6 +77,7 @@
     background: hsl(0 0% 70%);
     border-radius: 7px;
     overflow: hidden;
+    margin: 10px;
   }
 
   section {

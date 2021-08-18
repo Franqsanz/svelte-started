@@ -1,37 +1,37 @@
 <script>
   let phrases = [
     {
-      phrase: '"El único modo de hacer un gran trabajo es amar lo que haces - Steve Jobs"'
+      phrase: '"El único modo de hacer un gran trabajo es amar lo que haces" - Steve Jobs'
     },
     {
-      phrase: '"Nunca pienso en las consecuencias de fallar un gran tiro… cuando se piensa en las consecuencias se está pensando en un resultado negativo - Michael Jordan"'
+      phrase: '"Nunca pienso en las consecuencias de fallar un gran tiro… cuando se piensa en las consecuencias se está pensando en un resultado negativo" - Michael Jordan'
     },
     {
-      phrase: '"El dinero no es la clave del éxito; la libertad para poder crear lo es - Nelson Mandela"'
+      phrase: '"El dinero no es la clave del éxito; la libertad para poder crear lo es"- Nelson Mandela'
     },
     {
-      phrase: '"Cuanto más duramente trabajo, más suerte tengo - Gary Player"'
+      phrase: '"Cuanto más duramente trabajo, más suerte tengo" - Gary Player'
     },
     {
-      phrase: '"La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica - Aristóteles"'
+      phrase: '"La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica" - Aristóteles'
     },
     {
-      phrase: '"El trabajo duro hace que desaparezcan las arrugas de la mente y el espíritu - Helena Rubinstein"'
+      phrase: '"El trabajo duro hace que desaparezcan las arrugas de la mente y el espíritu" - Helena Rubinstein'
     },
     {
-      phrase: '"Cuando algo es lo suficientemente importante, lo haces incluso si las probabilidades de que salga bien no te acompañan - Elon Musk"'
+      phrase: '"Cuando algo es lo suficientemente importante, lo haces incluso si las probabilidades de que salga bien no te acompañan" - Elon Musk'
     },
     {
-      phrase: '"Escoge un trabajo que te guste, y nunca tendrás que trabajar ni un solo día de tu vida - Confucio"'
+      phrase: '"Escoge un trabajo que te guste, y nunca tendrás que trabajar ni un solo día de tu vida" - Confucio'
     },
     {
-      phrase: '"Un sueño no se hace realidad por arte de magia, necesita sudor, determinación y trabajo duro - Colin Powell"'
+      phrase: '"Un sueño no se hace realidad por arte de magia, necesita sudor, determinación y trabajo duro" - Colin Powell'
     },
     {
-      phrase: '"Cuéntamelo y me olvidaré. enséñamelo y lo recordaré. involúcrame y lo aprenderé - Benjamin Franklin"'
+      phrase: '"Cuéntamelo y me olvidaré. enséñamelo y lo recordaré. involúcrame y lo aprenderé" - Benjamin Franklin'
     },
     {
-      phrase: '"La lógica te llevará de la a a la z. la imaginación te llevará a cualquier lugar - Albert Einstein"'
+      phrase: '"La lógica te llevará de la a a la z. la imaginación te llevará a cualquier lugar" - Albert Einstein'
     }
 	];
 
@@ -73,25 +73,23 @@
 <p>{phrase.phrase}</p>
 
 <form on:submit={handleSubmit}>
-  <textarea bind:value={newPhrases} placeholder="Add Phrases" />
+  <textarea bind:value={newPhrases} />
   <button on:click={addPhrases}>Add Phrases</button>
 </form>
 
 <style>
   p {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 100%;
     color: #fafafa;
     font-size: clamp(1.125rem, 3vw, 1.563rem);
-    line-height: 1.66;
+    line-height: 1.55;
     font-style: italic;
     text-align: center;
-    padding: 1em 0 2em 0;
+    padding: 1.5em;
   }
 
   form {
-    max-width: 300px;
+    max-width: 400px;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -110,6 +108,8 @@
     color: #000000;
     font-weight: 700;
     letter-spacing: 3px;
+    border: 1px solid #000000;
+    font-size: inherit;
   }
 
   button:active {

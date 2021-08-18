@@ -14,7 +14,7 @@ body {
 
 .title{
 	color: #ff3e00;
-	font-size: clamp(3rem, 7vw, 6.5rem);
+	font-size: clamp(2.2rem, 7vw, 6.5rem);
 	font-weight: 100;
 	text-align: center;
 }
@@ -27,26 +27,4 @@ a {
 
 a:hover {
 	text-decoration: underline;
-}
-
-input, button {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-}
-
-button {
-	color: #000000;
-	background-color: #ff3e00;
-	border: 1px solid #ff3e00;
-	outline: none;
-}
-
-button:focus {
-	border-color: #666;
 }
