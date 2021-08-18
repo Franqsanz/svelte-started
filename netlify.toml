@@ -2,7 +2,13 @@
   command = "npm run build"
 
 [[redirects]]
-  from = "/"
+  from = "/phrases"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/rick"
   to = "/index.html"
   status = 200
   force = true
